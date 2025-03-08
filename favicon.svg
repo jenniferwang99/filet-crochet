@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg 
+  width="32" 
+  height="32" 
+  viewBox="0 0 32 32" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Ball of Yarn -->
+  <circle 
+    cx="16" 
+    cy="16" 
+    r="8" 
+    fill="#FF69B4"
+  />
+  <circle 
+    cx="16" 
+    cy="16" 
+    r="6" 
+    fill="#FFB6C1"
+  />
+  <path 
+    d="M16 10C16 10 14 12 14 16C14 20 16 22 16 22" 
+    stroke="#FF69B4" 
+    stroke-width="2" 
+    stroke-linecap="round"
+  />
+  
+  <!-- Crochet Hook -->
+  <path 
+    d="M24 8L28 12M24 12L28 8" 
+    stroke="#FF69B4" 
+    stroke-width="2" 
+    stroke-linecap="round"
+  />
+  <path 
+    d="M24 8C24 8 22 10 22 14C22 18 24 20 24 20" 
+    stroke="#FF69B4" 
+    stroke-width="2" 
+    stroke-linecap="round"
+  />
+</svg> 
