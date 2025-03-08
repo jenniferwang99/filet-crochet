@@ -57,7 +57,7 @@ const PreviewRow = styled.div`
 `;
 
 const PreviewCell = styled.span<{ isFilled: boolean }>`
-  color: ${props => props.isFilled ? '#333' : '#999'};
+  color: ${(props) => (props.isFilled ? '#333' : '#999')};
   width: 1.5rem;
   text-align: center;
 `;
@@ -80,4 +80,4 @@ const PatternInstructions = styled.div`
   }
 `;
 
-export default PatternPreview; 
+export default PatternPreview;

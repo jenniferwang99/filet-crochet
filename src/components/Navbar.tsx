@@ -58,9 +58,9 @@ const NavLinks = styled.div`
 `;
 
 const NavLink = styled(Link)<{ isActive: boolean }>`
-  color: ${props => props.isActive ? theme.colors.primary : theme.colors.textLight};
+  color: ${(props) => (props.isActive ? theme.colors.primary : theme.colors.textLight)};
   text-decoration: none;
-  font-weight: ${props => props.isActive ? '600' : '400'};
+  font-weight: ${(props) => (props.isActive ? '600' : '400')};
   transition: ${theme.transitions.default};
   position: relative;
   padding: 0.5rem 0;
@@ -78,11 +78,11 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
 
   &:hover {
     color: ${theme.colors.primary};
-    
+
     &:after {
       width: 100%;
     }
   }
 `;
 
-export default Navbar; 
+export default Navbar;

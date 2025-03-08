@@ -1,52 +1,57 @@
-import { useState } from 'react';
-import { HashRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { Link, Route, HashRouter as Router, Routes, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { theme } from './styles/theme';
-import Grid from './components/Grid';
-import {FiletCrochetInfo} from './components/FiletCrochetInfo';
 import AboutMe from './components/AboutMe';
+import { FiletCrochetInfo } from './components/FiletCrochetInfo';
+import Grid from './components/Grid';
 import './styles/global.css';
+import { theme } from './styles/theme';
 
 const NavBar = () => {
   const location = useLocation();
 
   return (
     <Nav>
-      <NavLink to="/" isActive={location.pathname === '/'}>Designer</NavLink>
-      <NavLink to="/about" isActive={location.pathname === '/about'}>What is Filet Crochet?</NavLink>
-      <NavLink to="/about-me" isActive={location.pathname === '/about-me'}>About Me</NavLink>
+      <NavLink to="/" isActive={location.pathname === '/'}>
+        Designer
+      </NavLink>
+      <NavLink to="/info" isActive={location.pathname === '/info'}>
+        What is Filet Crochet?
+      </NavLink>
+      <NavLink to="/about-me" isActive={location.pathname === '/about-me'}>
+        About Me
+      </NavLink>
     </Nav>
   );
 };
 
 const App = () => {
-  const [grid, setGrid] = useState<boolean[][]>([]);
-
   return (
     <Router>
       <Container>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Navigate to="/filet-crochet" replace />} />
-          <Route path="/filet-crochet" element={
-            <>
-              <Title>Filet Crochet Designer</Title>
-              <Legend>
-                <LegendItem>
-                  <LegendSquare isFilled={true} />
-                  <LegendText>3 double crochets</LegendText>
-                </LegendItem>
-                <LegendItem>
-                  <LegendSquare isFilled={false} />
-                  <LegendText>Skip 2 dc, dc in next dc</LegendText>
-                </LegendItem>
-              </Legend>
-              <GridContainer>
-                <Grid onGridChange={setGrid} />
-              </GridContainer>
-            </>
-          } />
-          <Route path="/about" element={<FiletCrochetInfo />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Title>Filet Crochet Designer</Title>
+                <Legend>
+                  <LegendItem>
+                    <LegendSquare isFilled={true} />
+                    <LegendText>3 double crochets</LegendText>
+                  </LegendItem>
+                  <LegendItem>
+                    <LegendSquare isFilled={false} />
+                    <LegendText>Skip 2 dc, dc in next dc</LegendText>
+                  </LegendItem>
+                </Legend>
+                <GridContainer>
+                  <Grid onGridChange={() => {}} />
+                </GridContainer>
+              </>
+            }
+          />
+          <Route path="/info" element={<FiletCrochetInfo />} />
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
       </Container>
@@ -72,7 +77,7 @@ const Nav = styled.nav`
 const NavLink = styled(Link)<{ isActive: boolean }>`
   font-family: ${theme.typography.fontFamily.heading};
   font-size: ${theme.typography.fontSize.large};
-  color: ${props => props.isActive ? theme.colors.primary : theme.colors.text};
+  color: ${(props) => (props.isActive ? theme.colors.primary : theme.colors.text)};
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: ${theme.borderRadius.small};
@@ -84,7 +89,7 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
     position: absolute;
     bottom: 0;
     left: 0;
-    width: ${props => props.isActive ? '100%' : '0'};
+    width: ${(props) => (props.isActive ? '100%' : '0')};
     height: 2px;
     background-color: ${theme.colors.primary};
     transition: ${theme.transitions.default};
@@ -92,7 +97,7 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
 
   &:hover {
     color: ${theme.colors.primary};
-    
+
     &:after {
       width: 100%;
     }
@@ -129,7 +134,7 @@ const LegendSquare = styled.div<{ isFilled: boolean }>`
   width: 30px;
   height: 30px;
   border: 1px solid ${theme.colors.border};
-  background-color: ${props => props.isFilled ? theme.colors.primary : theme.colors.white};
+  background-color: ${(props) => (props.isFilled ? theme.colors.primary : theme.colors.white)};
   flex-shrink: 0;
 `;
 

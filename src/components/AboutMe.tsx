@@ -8,9 +8,9 @@ const AboutMe = () => {
       <Content>
         <Section>
           <Paragraph>
-            Hi! I'm Jenn, and I started crocheting last year. I'm a passionate crochet newbie who loves creating beautiful patterns. 
-            I developed this Filet Crochet Designer tool to help fellow crocheters easily 
-            create and visualize their filet crochet patterns.
+            Hi! I'm Jenn, and I started crocheting last year. I'm a passionate crochet newbie who
+            loves creating beautiful patterns. I developed this Filet Crochet Designer tool to help
+            fellow crocheters easily create and visualize their filet crochet patterns.
           </Paragraph>
         </Section>
       </Content>
@@ -60,4 +60,4 @@ const Paragraph = styled.p`
   }
 `;
 
-export default AboutMe; 
+export default AboutMe;

@@ -32,8 +32,8 @@ function Grid({ onGridChange }: GridProps) {
   const [grid, setGrid] = useState<boolean[][]>(Array(rows).fill(Array(cols).fill(false)));
 
   const toggleCell = (row: number, col: number) => {
-    setGrid(prevGrid => {
-      const newGrid = prevGrid.map(row => [...row]);
+    setGrid((prevGrid) => {
+      const newGrid = prevGrid.map((row) => [...row]);
       newGrid[row][col] = !newGrid[row][col];
       onGridChange(newGrid);
       return newGrid;
@@ -48,15 +48,17 @@ function Grid({ onGridChange }: GridProps) {
 
   const updateGridSize = (newRows: number, newCols: number) => {
     if (newRows < 1 || newCols < 1) return;
-    
-    const newGrid = Array(newRows).fill(null).map(() => Array(newCols).fill(false));
-    
+
+    const newGrid = Array(newRows)
+      .fill(null)
+      .map(() => Array(newCols).fill(false));
+
     for (let i = 0; i < Math.min(rows, newRows); i++) {
       for (let j = 0; j < Math.min(cols, newCols); j++) {
         newGrid[i][j] = grid[i][j];
       }
     }
-    
+
     setGrid(newGrid);
     setRows(newRows);
     setCols(newCols);
@@ -132,8 +134,8 @@ const Canvas = styled.div<CanvasProps>`
   border: 2px solid ${theme.colors.border};
   border-radius: ${theme.borderRadius.medium};
   display: grid;
-  grid-template-columns: repeat(${props => props.cols}, ${CELL_SIZE.desktop});
-  grid-template-rows: repeat(${props => props.rows}, ${CELL_SIZE.desktop});
+  grid-template-columns: repeat(${(props) => props.cols}, ${CELL_SIZE.desktop});
+  grid-template-rows: repeat(${(props) => props.rows}, ${CELL_SIZE.desktop});
   gap: 0;
   padding: 0.5rem;
   width: fit-content;
@@ -148,8 +150,8 @@ const Canvas = styled.div<CanvasProps>`
   overflow: auto;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(${props => props.cols}, ${CELL_SIZE.mobile});
-    grid-template-rows: repeat(${props => props.rows}, ${CELL_SIZE.mobile});
+    grid-template-columns: repeat(${(props) => props.cols}, ${CELL_SIZE.mobile});
+    grid-template-rows: repeat(${(props) => props.rows}, ${CELL_SIZE.mobile});
     padding: 0.25rem;
     max-height: calc(100vh - 180px);
   }
@@ -159,7 +161,7 @@ const Cell = styled.div<{ isFilled: boolean }>`
   width: ${CELL_SIZE.desktop};
   height: ${CELL_SIZE.desktop};
   border: 1px solid ${theme.colors.border};
-  background-color: ${props => props.isFilled ? theme.colors.primary : theme.colors.white};
+  background-color: ${(props) => (props.isFilled ? theme.colors.primary : theme.colors.white)};
   cursor: pointer;
   transition: ${theme.transitions.default};
 
@@ -169,7 +171,7 @@ const Cell = styled.div<{ isFilled: boolean }>`
   }
 
   &:hover {
-    background-color: ${props => props.isFilled ? theme.colors.hover : theme.colors.secondary};
+    background-color: ${(props) => (props.isFilled ? theme.colors.hover : theme.colors.secondary)};
   }
 `;
 
@@ -262,4 +264,4 @@ const Button = styled.button`
   }
 `;
 
-export default Grid; 
+export default Grid;
