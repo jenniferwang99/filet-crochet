@@ -287,7 +287,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     background-color: ${X.colors.hover};
     transform: translateY(-1px);
   }
-`,z1=()=>{const u=Ql();return q.jsxs(D1,{children:[q.jsx(Of,{to:"/",isActive:u.pathname==="/",children:"Designer"}),q.jsx(Of,{to:"/info",isActive:u.pathname==="/info",children:"What is Filet Crochet?"}),q.jsx(Of,{to:"/about-me",isActive:u.pathname==="/about-me",children:"About Me"})]})},O1=()=>{const[u,c]=U.useState([]);return q.jsx(Fp,{children:q.jsxs(_1,{children:[q.jsx(z1,{}),q.jsxs(_p,{children:[q.jsx(Bi,{path:"/",element:q.jsxs(q.Fragment,{children:[q.jsx(M1,{children:"Filet Crochet Designer"}),q.jsxs(C1,{children:[q.jsxs(ym,{children:[q.jsx(vm,{isFilled:!0}),q.jsx(pm,{children:"3 double crochets"})]}),q.jsxs(ym,{children:[q.jsx(vm,{isFilled:!1}),q.jsx(pm,{children:"Skip 2 dc, dc in next dc"})]})]}),q.jsx(U1,{children:q.jsx(b1,{onGridChange:c})})]})}),q.jsx(Bi,{path:"/info",element:q.jsx(y1,{})}),q.jsx(Bi,{path:"/about-me",element:q.jsx(f1,{})})]})]})})},_1=pt.div`
+`,z1=()=>{const u=Ql();return q.jsxs(D1,{children:[q.jsx(Of,{to:"/",isActive:u.pathname==="/",children:"Designer"}),q.jsx(Of,{to:"/info",isActive:u.pathname==="/info",children:"What is Filet Crochet?"}),q.jsx(Of,{to:"/about-me",isActive:u.pathname==="/about-me",children:"About Me"})]})},O1=()=>q.jsx(Fp,{children:q.jsxs(_1,{children:[q.jsx(z1,{}),q.jsxs(_p,{children:[q.jsx(Bi,{path:"/",element:q.jsxs(q.Fragment,{children:[q.jsx(M1,{children:"Filet Crochet Designer"}),q.jsxs(C1,{children:[q.jsxs(ym,{children:[q.jsx(vm,{isFilled:!0}),q.jsx(pm,{children:"3 double crochets"})]}),q.jsxs(ym,{children:[q.jsx(vm,{isFilled:!1}),q.jsx(pm,{children:"Skip 2 dc, dc in next dc"})]})]}),q.jsx(U1,{children:q.jsx(b1,{onGridChange:()=>{}})})]})}),q.jsx(Bi,{path:"/info",element:q.jsx(y1,{})}),q.jsx(Bi,{path:"/about-me",element:q.jsx(f1,{})})]})]})}),_1=pt.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -321,7 +321,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
 
   &:hover {
     color: ${X.colors.primary};
-    
+
     &:after {
       width: 100%;
     }
