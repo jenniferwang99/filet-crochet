@@ -1,4 +1,6 @@
-# Filet Crochet Designer 🧶
+# Filet Crochet Designer
+
+Visit the live application at: [https://jenniferwang99.github.io/filet-crochet/](https://jenniferwang99.github.io/filet-crochet/)
 
 A modern web application for creating and visualizing filet crochet patterns. This tool helps crocheters design their own filet crochet patterns with an intuitive grid-based interface.
 
