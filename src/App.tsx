@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from './styles/theme';
 import Grid from './components/Grid';
@@ -27,7 +27,8 @@ const App = () => {
       <Container>
         <NavBar />
         <Routes>
-          <Route path="/" element={
+          <Route path="/" element={<Navigate to="/filet-crochet" replace />} />
+          <Route path="/filet-crochet" element={
             <>
               <Title>Filet Crochet Designer</Title>
               <Legend>

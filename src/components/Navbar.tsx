@@ -10,7 +10,7 @@ function Navbar() {
       <NavContainer>
         <Logo to="/">Filet Crochet Designer</Logo>
         <NavLinks>
-          <NavLink to="/" isActive={location.pathname === '/'}>
+          <NavLink to="/filet-crochet" isActive={location.pathname === '/filet-crochet'}>
             Designer
           </NavLink>
           <NavLink to="/about" isActive={location.pathname === '/about'}>
