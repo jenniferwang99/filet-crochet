@@ -9,7 +9,6 @@ A modern web application for creating and visualizing filet crochet patterns. Th
 - **Clear Grid Function**: Start fresh with one click
 - **Responsive Design**: Works well on both desktop and mobile devices
 - **Educational Content**: Learn about filet crochet through the included guide
-- **Support for both 3 DC and 4 DC filet crochet blocks**
 
 ## Getting Started 🚀
 
